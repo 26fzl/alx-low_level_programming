@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - prints all single digit numbers
+ *main - Entry
  *return: Always 0
  */
 int main(void)
