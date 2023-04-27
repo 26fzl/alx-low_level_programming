@@ -13,13 +13,13 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
-		if (n % 3 == 0)
+		else if (n % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Buzz")
+			printf("Buzz");
 		}
 		else
 		{
@@ -30,6 +30,6 @@ int main(void)
 			printf(" ");
 		}
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
