@@ -2,24 +2,31 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - generates keygen.
+ * main - rogram that generates random valid
+ * passwords for the program 101-crackme
  * Return: 0 Always.
  */
 int main(void)
 {
-	int a = 0, b = 0;
-	time_t t;
+	int pass[100];
+	int i, sum, n;
+	
+	sum = 0;
+	
+	srand(time(NULL));
 
-	srand((unsigned int) time(&t));
-	while (b < 2772)
+	for (i = 0; i < 100; i++)
 	{
-		a = rand() % 128;
-		if ((b + a) > 2772)
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
 			break;
-		b = b + a;
-		printf("%d", a);
+		}
 	}
-	printf("%08d\n", (2772 - b));
 	return (0);
 }
-
