@@ -6,16 +6,29 @@
  */
 int _atoi(char *s)
 {
-	int b = 1;
-	unsigned int a = 0;
+	int a = 0;
+	unsigned int b = 0;
+	int c = 1;
+	int d = 0;
 
-	do {
-		if (*s == '-')
-			a *= -1;
-		else if (*s >= '0' && *s <= '9')
-			a = (a * 10) + (*s - '0');
-		else if (a > 0)
-		break;
-		} while (*s++);
-		return (a * b);
+	while (s[a])
+	{
+		if (s[a] == 45)
+		{
+			c *= -1;
+		}
+		while (s[a] >= 48 && s[a] <= 57)
+		{
+			d = 1;
+			b = (b * 10) + (s[a] - '0');
+			a++;
+		}
+		if (d == 1)
+		{
+			break;
+		}
+		a++;
+	}
+	b *= c;
+	return (b);
 }
