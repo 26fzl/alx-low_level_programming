@@ -3,11 +3,10 @@
  * _puts -print a string to stdout
  * @str: the string to print
  * Return: the lenght of string
- *
  */
 void _puts(char *str)
 {
-	while (; *str != '\0'; str++)
+	for (; *str != '\0'; str++)
 	{
 	_putchar(*str);
 	}
