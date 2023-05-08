@@ -4,7 +4,7 @@
  * _strstr - locate a substring
  * @haystack: input string
  * @needle: input substring
- * Return: 0
+ * Return: Always 0
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -27,5 +27,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		}
 	}
-	return (0);
+	return (NULL);
 }
