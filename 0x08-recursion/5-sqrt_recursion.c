@@ -1,5 +1,5 @@
 #include "main.h"
-int _sqrt(int n, int i);
+int _sqrt(int n, int j);
 /**
  * _sqrt_recursion - return the natural square root of a number
  * @n: number to be calculated
@@ -14,14 +14,14 @@ int _sqrt_recursion(int n)
 /**
  * _sqrt - calculate natural square root
  * @n: number to be calculated
- * @i: iterator
+ * @j: iterator
  * Return: natural square root
  */
-int _sqrt(int n, int i)
+int _sqrt(int n, int j)
 {
-	if (i * i > n)
+	if (j * j > n)
 		return (-1);
-	if (i * i == n)
-		return (i);
-	return (_sqrt(n, i + 1));
+	if (j * j == n)
+		return (j);
+	return (_sqrt(n, j + 1));
 }
