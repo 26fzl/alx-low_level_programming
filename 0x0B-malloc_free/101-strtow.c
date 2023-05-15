@@ -7,12 +7,12 @@ char **strtow(char *str);
 
 /**
  *word_len - represents the length
- *@str: The string
- *Return: The index marking the end of the initial word str.
+ * @str: The string
+ * Return: The index marking the end of the initial word str.
 */
 int word_len(char *str)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
 
 	while (*(str + i) && *(str + i) != ' ')
 	{
@@ -79,6 +79,7 @@ char **strtow(char *str)
 		}
 		for (l = 0; l < let; l++)
 			stg[w][1] = str[i++];
+
 		stg[w][l] = '\0';
 	}
 	stg[w] = NULL;
