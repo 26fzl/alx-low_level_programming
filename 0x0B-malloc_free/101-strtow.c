@@ -56,10 +56,14 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
+	
 	wds = count_words(str);
+	
 	if (wds == 0)
 		return (NULL);
+	
 	stg = malloc(sizeof(char *) * (wds + 1));
+	
 	if (stg == NULL)
 		return (NULL);
 	for (w = 0; w < wds; w++)
@@ -78,10 +82,11 @@ char **strtow(char *str)
 			return (NULL);
 		}
 		for (l = 0; l < let; l++)
-			stg[w][1] = str[i++];
+			stg[w][l] = str[i++];
 
 		stg[w][l] = '\0';
 	}
 	stg[w] = NULL;
+
 	return (stg);
 }
