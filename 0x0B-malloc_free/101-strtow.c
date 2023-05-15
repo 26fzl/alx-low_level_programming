@@ -56,14 +56,14 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-	
+
 	wds = count_words(str);
-	
+
 	if (wds == 0)
 		return (NULL);
-	
+
 	stg = malloc(sizeof(char *) * (wds + 1));
-	
+
 	if (stg == NULL)
 		return (NULL);
 	for (w = 0; w < wds; w++)
