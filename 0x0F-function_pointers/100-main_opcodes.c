@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	for (cnt = 0; cnt < byt; cnt++)
 	{
-		printff("%02hhx\n", *((char *)main + cnt));
+		printf("%02hhx", *((char *)main + cnt));
 		if (cnt < byt - 1)
 			printf(" ");
 		else
