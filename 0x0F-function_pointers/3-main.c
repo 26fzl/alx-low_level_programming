@@ -6,7 +6,7 @@
  * main - check arguments
  * @argc: arg 1
  * @argv: arg 2
- * Return: error
+ * Return: always 0
  */
 int main(int argc, char **argv)
 {
