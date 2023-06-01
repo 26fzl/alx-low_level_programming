@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print_quote - prints a quote
+ * before_main - prints a sentence before the main
  * Return: no return
  */
 void __attribute__((constructor)) before_main()
