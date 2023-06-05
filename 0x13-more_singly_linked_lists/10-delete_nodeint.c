@@ -5,12 +5,12 @@
  * @head: pointer
  * @index: The index of the node to delete
  *
- * Return: if success 1 otherwise -1
+ * Return: if success 1 if fail -1
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *cur = *head;
-	listint_t *tem = NULL;
+	listint_t *temp = NULL;
 	unsigned int x;
 
 	if (index == 0)
@@ -28,10 +28,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		cur = cur->next;
 	}
 
-	tem = cur->next;
-
-	cur->next = tem->next;
-
-	free(tem);
+	temp = cur->next;
+	cur->next = temp->next;
+	free(temp);
 	return (1);
 }
