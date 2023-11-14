@@ -4,8 +4,8 @@
  * of integers using the Binary search algorithm.
  *
  * @array: pointer to the first element of the array to search in.
- * @lt: starting of index.
- * @rt: ending of index.
+ * @lft: starting of index.
+ * @rgt: ending of index.
  * @value: the value to search for.
  * Return: the index where value is located.
  */
